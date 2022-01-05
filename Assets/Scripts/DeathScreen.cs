@@ -12,8 +12,12 @@ public class DeathScreen : MonoBehaviour
     [SerializeField] private Button _btnPlayAgain;
     [SerializeField] private Button _btnBackToMainMenu;
 
+    [SerializeField] private MyHealth _playerHealth;
+
     private void Awake()
     {
+        //_playerHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<MyHealth>();
+
         _deathScreen.SetActive(false);
         _btnPlayAgain.onClick.AddListener(PlayAgain);
         _btnBackToMainMenu.onClick.AddListener(BackToMainMenu);
@@ -22,7 +26,7 @@ public class DeathScreen : MonoBehaviour
     private void Update()
     {
         // изменить на  if _curHP <= 0
-        if (Input.GetKeyDown(KeyCode.F))
+        if (_playerHealth.CurHP <= 1)
         {
             _deathScreen.SetActive(true);
             Time.timeScale = 0;

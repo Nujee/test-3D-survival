@@ -360,7 +360,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47510a9925918904291f51d577054acd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _camera: {fileID: 0}
 --- !u!1 &191773783368267723
 GameObject:
   m_ObjectHideFlags: 0
@@ -8854,7 +8853,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78a528fa30d4d8e4a8f9338dc44fc02d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _target: {fileID: 0}
   _attackDamage: 1
   _attackThreshold: 2
 --- !u!114 &7606531999494820003
@@ -8881,7 +8879,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.75
-  m_Speed: 3.5
+  m_Speed: 2
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120

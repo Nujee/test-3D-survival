@@ -71,12 +71,12 @@ public class Player : MonoBehaviour
     {
         //влево-вправо + вперед-назад
         var verticalMovement  = transform.forward * Input.GetAxis("Vertical") * SpeedForce * Time.fixedDeltaTime;
-        var horizontalMovement = transform.right * Input.GetAxis("Horizontal") * SpeedForce * Time.fixedDeltaTime;
+        //var horizontalMovement = transform.right * Input.GetAxis("Horizontal") * SpeedForce * Time.fixedDeltaTime;
 
-        _rigidbody.AddForce(horizontalMovement + verticalMovement);
+        _rigidbody.AddForce(verticalMovement);
 
         //поворот по мышке (можно еще добавить регулируемый _angularVelocityCoef для быстроты поворта)
-        var h = horizontalSpeed * Input.GetAxis("Mouse X");
+        var h = horizontalSpeed * Input.GetAxis("Horizontal");
         _rigidbody.MoveRotation(_rigidbody.rotation * (Quaternion.Euler(new Vector3(0, h, 0) * Time.fixedDeltaTime)));
     }
 

@@ -6,7 +6,7 @@ public class EnemySpawnerController : MonoBehaviour
 {
     [SerializeField] private GameObject _enemyPref;
     [SerializeField] private Transform[] _enemySpawners;
-    private int _maxEnemyNum = 6;
+    private int _maxEnemyNum = 100;
     private int _curEnemyNum = 0;
 
     private void Awake()

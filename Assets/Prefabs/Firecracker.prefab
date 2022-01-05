@@ -88,8 +88,8 @@ GameObject:
   m_Component:
   - component: {fileID: 6587573370654040328}
   - component: {fileID: 6219599712762689292}
-  - component: {fileID: 8975488216602483527}
   - component: {fileID: 1277395540002253367}
+  - component: {fileID: -457462698584974352}
   m_Layer: 0
   m_Name: Firecracker
   m_TagString: Untagged
@@ -130,45 +130,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 1
---- !u!114 &8975488216602483527
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4244509029221272473}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a3e9111ed69dd1846be9c7655a79d3a3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  OnTakeDamage:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 5682965340952807588, guid: f02653acd396cf04595908b058c15139,
-          type: 3}
-        m_MethodName: TakeDamage
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 42
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1902827282, guid: 73676222ab04b5740a0b365656b69d8c, type: 3}
-        m_MethodName: TakeDamage
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 30
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  _mineDamage: 0
 --- !u!65 &1277395540002253367
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -182,6 +143,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.2533729, y: 0.50026774, z: 0.25470534}
   m_Center: {x: -0.0038295984, y: 0.018508792, z: 0.0061511546}
+--- !u!114 &-457462698584974352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4244509029221272473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 670d9ce43ff1e814185681747f7c4d6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _bombDamage: 100
 --- !u!1 &6702263233760124003
 GameObject:
   m_ObjectHideFlags: 0
@@ -317,7 +291,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e62d468daea7cb04098b5447f2a8f3f6, type: 2}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

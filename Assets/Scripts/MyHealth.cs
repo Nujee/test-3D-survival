@@ -25,12 +25,10 @@ public class MyHealth : MonoBehaviour
     public void TakeDamage(int damage)
     {
         CurHP -= damage;
-        /*
         if (_curHP <= 0)
         {
             Die();
         }
-        */
     }
 
     public void TakeHeal(int heal)
@@ -42,6 +40,12 @@ public class MyHealth : MonoBehaviour
             CurHP = MaxHP;
         }
     }
+
+    private void Die()
+    {
+        Destroy(gameObject);
+    }
+
     /*
     private void Die()
     {

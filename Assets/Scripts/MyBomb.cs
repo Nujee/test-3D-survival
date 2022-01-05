@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bomb : MonoBehaviour
+public class MyBomb : MonoBehaviour
 {
-    public int _bombDamage = 15;
+    public int _bombDamage = 100;
 
     private void Awake()
     {
@@ -16,7 +16,10 @@ public class Bomb : MonoBehaviour
         var hits = Physics.OverlapSphere(transform.position, 3);
         foreach (var hit in hits)
         {
-            Debug.Log(hit.tag);
+            if (hit.gameObject.GetComponent<MyHealth>())
+            {
+                hit.gameObject.GetComponent<MyHealth>().TakeDamage(_bombDamage);
+            }
         }
         Destroy(gameObject);
     }
