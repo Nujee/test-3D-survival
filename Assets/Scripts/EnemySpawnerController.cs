@@ -2,23 +2,24 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemySpawner : MonoBehaviour
+public class EnemySpawnerController : MonoBehaviour
 {
     [SerializeField] private GameObject _enemyPref;
-    [SerializeField] private int _maxEnemyNum;
-
-    private int _curEnemyNum;
+    [SerializeField] private Transform[] _enemySpawners;
+    private int _maxEnemyNum = 6;
+    private int _curEnemyNum = 0;
 
     private void Awake()
     {
         InvokeRepeating("Spawn", 3, 2);
-        _curEnemyNum = 0;
     }
 
     private void Spawn()
     {
-        Instantiate(_enemyPref, transform.position, transform.rotation);
+        var randomSpawner = _enemySpawners[Random.Range(0, _enemySpawners.Length)].position;
+        Instantiate(_enemyPref, randomSpawner, transform.rotation);
         _curEnemyNum++;
+
         if (_curEnemyNum >= _maxEnemyNum)
         {
             CancelInvoke();

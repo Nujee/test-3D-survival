@@ -6,7 +6,7 @@ using UnityEngine;
 // _trackingObjectTransform.y в лэйтапдейте, это ж кватрнион, а беру как эйлера
 public class MyCamera : MonoBehaviour
 {
-    [SerializeField] private Transform _trackingObjectTransform;
+    [SerializeField] private Transform _targetTransform;
     [SerializeField] private float _cameraOffset = 3f;
     [SerializeField] private float _cameraHeight = 1.5f;
 
@@ -15,14 +15,14 @@ public class MyCamera : MonoBehaviour
 
     private void FixedUpdate()
     {
-        transform.LookAt(_trackingObjectTransform);
+        transform.LookAt(_targetTransform);
     }
 
     private void LateUpdate()
     {
-        float cameraX = _targetPosition.x + _cameraOffset * Mathf.Sin(Mathf.PI * _trackingObjectTransform.rotation.y);
+        float cameraX = _targetPosition.x + _cameraOffset * Mathf.Sin(Mathf.PI * _targetTransform.rotation.y);
         float cameraY = _cameraHeight;
-        float cameraZ = _targetPosition.z + _cameraOffset * Mathf.Cos(Mathf.PI * _trackingObjectTransform.rotation.y);
+        float cameraZ = _targetPosition.z + _cameraOffset * Mathf.Cos(Mathf.PI * _targetTransform.rotation.y);
 
         transform.position = new Vector3(cameraX, cameraY, cameraZ);
     }

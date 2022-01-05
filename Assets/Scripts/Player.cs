@@ -25,7 +25,7 @@ public class Player : MonoBehaviour
 
     private void Awake()
     {
-        Cursor.lockState = CursorLockMode.Locked;
+        //Cursor.lockState = CursorLockMode.Locked;
         _rigidbody = GetComponent<Rigidbody>();
         _animator = GetComponent<Animator>();
     }

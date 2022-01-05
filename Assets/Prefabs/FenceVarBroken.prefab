@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 4645928303813041069}
   - component: {fileID: 7929377666277253906}
   - component: {fileID: 6706623984958322183}
-  - component: {fileID: 1246169753113177665}
   m_Layer: 0
   m_Name: Cube (2)
   m_TagString: Untagged
@@ -79,19 +78,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &1246169753113177665
+--- !u!65 &1014850065619298286
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4175398797607048113}
+  m_GameObject: {fileID: 4039172228418203480}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 2.1207948, y: 0.8419587, z: 0.28823256}
+  m_Center: {x: 0.06693721, y: 0.40260378, z: 0.002755642}
 --- !u!1001 &4273548899358897349
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -102,7 +101,7 @@ PrefabInstance:
     - target: {fileID: 234389117804288925, guid: 0a8d536735eef304ea5fab06db79a0c0,
         type: 3}
       propertyPath: m_Name
-      value: Fence Variant
+      value: FenceVarBroken
       objectReference: {fileID: 0}
     - target: {fileID: 3544682979311646642, guid: 0a8d536735eef304ea5fab06db79a0c0,
         type: 3}
@@ -161,6 +160,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0a8d536735eef304ea5fab06db79a0c0, type: 3}
+--- !u!1 &4039172228418203480 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 234389117804288925, guid: 0a8d536735eef304ea5fab06db79a0c0,
+    type: 3}
+  m_PrefabInstance: {fileID: 4273548899358897349}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &756477707091575671 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3544682979311646642, guid: 0a8d536735eef304ea5fab06db79a0c0,

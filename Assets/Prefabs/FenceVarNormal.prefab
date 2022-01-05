@@ -1,5 +1,18 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!65 &4561675760717338691
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1837524865594658010}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.1851513, y: 0.8928733, z: 0.31747127}
+  m_Center: {x: 0.032155395, y: 0.40555, z: 0.004581213}
 --- !u!1 &8431595399495589828
 GameObject:
   m_ObjectHideFlags: 0
@@ -11,7 +24,6 @@ GameObject:
   - component: {fileID: 8807531313762725823}
   - component: {fileID: 2720205258769729926}
   - component: {fileID: 7643593824655447036}
-  - component: {fileID: 2337936873454959106}
   m_Layer: 0
   m_Name: Cube (3)
   m_TagString: Untagged
@@ -79,19 +91,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &2337936873454959106
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8431595399495589828}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1927686360270280519
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -102,7 +101,7 @@ PrefabInstance:
     - target: {fileID: 234389117804288925, guid: 0a8d536735eef304ea5fab06db79a0c0,
         type: 3}
       propertyPath: m_Name
-      value: FenceBase
+      value: FenceVarNormal
       objectReference: {fileID: 0}
     - target: {fileID: 3544682979311646642, guid: 0a8d536735eef304ea5fab06db79a0c0,
         type: 3}
@@ -161,6 +160,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0a8d536735eef304ea5fab06db79a0c0, type: 3}
+--- !u!1 &1837524865594658010 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 234389117804288925, guid: 0a8d536735eef304ea5fab06db79a0c0,
+    type: 3}
+  m_PrefabInstance: {fileID: 1927686360270280519}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3166517534073086197 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3544682979311646642, guid: 0a8d536735eef304ea5fab06db79a0c0,

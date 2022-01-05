@@ -64,10 +64,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Billboard.cs" />
     <Compile Include="Assets\Scripts\Bullet.cs" />
-    <Compile Include="Assets\Scripts\EnemySpawner.cs" />
+    <Compile Include="Assets\Scripts\DeathScreen.cs" />
+    <Compile Include="Assets\Scripts\EnemySpawnerController.cs" />
+    <Compile Include="Assets\Scripts\GameMenu.cs" />
+    <Compile Include="Assets\Scripts\HealthBarController.cs" />
     <Compile Include="Assets\Scripts\HealthUp.cs" />
-    <Compile Include="Assets\Scripts\LevelGenerator.cs" />
     <Compile Include="Assets\Scripts\MainMenu.cs" />
     <Compile Include="Assets\Scripts\MyBomb.cs" />
     <Compile Include="Assets\Scripts\MyCamera.cs" />
@@ -78,7 +81,6 @@
     <Compile Include="Assets\Scripts\MyMine.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
     <Compile Include="Assets\Scripts\SpeedUp.cs" />
-    <Compile Include="Assets\Scripts\Test.cs" />
     <Compile Include="Assets\Scripts\Turret.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>D:/Test3DSurvivalRepo/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>

@@ -4,11 +4,14 @@ using UnityEngine;
 
 public class MyHealth : MonoBehaviour
 {
-    [SerializeField] private int _maxHP = 100;
+    [SerializeField] private int _maxHP = 10000;
     [SerializeField] private int _curHP = 0;
     //[SerializeField] private Color _deathColor = Color.black;
 
     private MeshRenderer _meshRenderer;
+
+    public int MaxHP { get => _maxHP; set => _maxHP = value; }
+    public int CurHP { get => _curHP; set => _curHP = value; }
 
     private void Awake()
     {
@@ -16,12 +19,12 @@ public class MyHealth : MonoBehaviour
     }
     private void Start()
     {
-        _curHP = _maxHP;
+        CurHP = MaxHP;
     }
 
     public void TakeDamage(int damage)
     {
-        _curHP -= damage;
+        CurHP -= damage;
         /*
         if (_curHP <= 0)
         {
@@ -32,11 +35,11 @@ public class MyHealth : MonoBehaviour
 
     public void TakeHeal(int heal)
     {
-        _curHP += heal;
+        CurHP += heal;
 
-        if (_curHP >= _maxHP)
+        if (CurHP >= MaxHP)
         {
-            _curHP = _maxHP;
+            CurHP = MaxHP;
         }
     }
     /*
