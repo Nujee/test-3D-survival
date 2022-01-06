@@ -9,13 +9,14 @@ public class MyHealth : MonoBehaviour
     //[SerializeField] private Color _deathColor = Color.black;
 
     private MeshRenderer _meshRenderer;
+    [SerializeField] private ParticleSystem _particleSystem;
 
     public int MaxHP { get => _maxHP; set => _maxHP = value; }
     public int CurHP { get => _curHP; set => _curHP = value; }
 
     private void Awake()
     {
-        _meshRenderer = gameObject.GetComponent<MeshRenderer>();
+        _meshRenderer = GetComponent<MeshRenderer>();
     }
     private void Start()
     {
@@ -24,6 +25,7 @@ public class MyHealth : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
+        _particleSystem?.Play();
         CurHP -= damage;
         if (_curHP <= 0)
         {

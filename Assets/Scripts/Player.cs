@@ -21,6 +21,8 @@ public class Player : MonoBehaviour
     private float _reloadTime = 2;
     private bool _isreloaded = true;
 
+    private AudioSource _audioSource;
+
     public float SpeedForce { get => _speedForce; set => _speedForce = value; }
 
     private void Awake()
@@ -28,6 +30,7 @@ public class Player : MonoBehaviour
         //Cursor.lockState = CursorLockMode.Locked;
         _rigidbody = GetComponent<Rigidbody>();
         _animator = GetComponent<Animator>();
+        _audioSource = GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -83,7 +86,8 @@ public class Player : MonoBehaviour
     private void Fire()
     {
         var bul = Instantiate(_bullet, _bulletStartPosition.position, transform.rotation).GetComponent<Bullet>();
-        bul.Init(100);
+        bul.Init(50);
+        _audioSource.Play();
         _animator.SetBool("Fire", false);
     }
 
