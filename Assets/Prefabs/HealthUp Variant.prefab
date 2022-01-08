@@ -93,6 +93,20 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+--- !u!114 &1134025173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4475400990846106184}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b49929807e671b43b9ba351dac14c95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _bonusHP: 500
+  _particleSystem: {fileID: 7260217438323508605}
 --- !u!1 &3802859567206195063
 GameObject:
   m_ObjectHideFlags: 0
@@ -186,19 +200,6 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
---- !u!114 &1134025173
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4475400990846106184}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1b49929807e671b43b9ba351dac14c95, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _bonusHP: 500
 --- !u!1001 &2415755750923297499
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -206,10 +207,40 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1868689445025254767, guid: 0a570407b1865f74382507fcb67cf098,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 2278166597165373587, guid: 0a570407b1865f74382507fcb67cf098,
         type: 3}
       propertyPath: m_Name
       value: HealthUp Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 4991963407952209830, guid: 0a570407b1865f74382507fcb67cf098,
+        type: 3}
+      propertyPath: InitialModule.startColor.maxColor.r
+      value: 0.9716981
+      objectReference: {fileID: 0}
+    - target: {fileID: 4991963407952209830, guid: 0a570407b1865f74382507fcb67cf098,
+        type: 3}
+      propertyPath: InitialModule.startColor.maxColor.g
+      value: 0.12375401
+      objectReference: {fileID: 0}
+    - target: {fileID: 4991963407952209830, guid: 0a570407b1865f74382507fcb67cf098,
+        type: 3}
+      propertyPath: InitialModule.startColor.maxColor.b
+      value: 0.12375401
+      objectReference: {fileID: 0}
+    - target: {fileID: 4991963407952209830, guid: 0a570407b1865f74382507fcb67cf098,
+        type: 3}
+      propertyPath: looping
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4991963407952209830, guid: 0a570407b1865f74382507fcb67cf098,
+        type: 3}
+      propertyPath: playOnAwake
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6112317630568226887, guid: 0a570407b1865f74382507fcb67cf098,
         type: 3}
@@ -277,6 +308,12 @@ GameObject:
 --- !u!4 &8454713964465717916 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6112317630568226887, guid: 0a570407b1865f74382507fcb67cf098,
+    type: 3}
+  m_PrefabInstance: {fileID: 2415755750923297499}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &7260217438323508605 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 4991963407952209830, guid: 0a570407b1865f74382507fcb67cf098,
     type: 3}
   m_PrefabInstance: {fileID: 2415755750923297499}
   m_PrefabAsset: {fileID: 0}

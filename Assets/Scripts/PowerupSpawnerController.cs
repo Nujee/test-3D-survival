@@ -11,7 +11,7 @@ public class PowerupSpawnerController : MonoBehaviour
 
     private void Awake()
     {
-        InvokeRepeating("Spawn", 1, 20);
+        InvokeRepeating("Spawn", 1, 5);
     }
 
     private void Spawn()
