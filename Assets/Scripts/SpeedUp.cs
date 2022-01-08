@@ -6,6 +6,7 @@ public class SpeedUp : MonoBehaviour
 {
     [SerializeField] private float _bonusSpeedForce = 500f;
     [SerializeField] private float _bonusDuration = 5f;
+    [SerializeField] private ParticleSystem _particleSystem;
     private Player _player;
 
     private void Awake()
@@ -17,6 +18,8 @@ public class SpeedUp : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            GetComponent<AudioSource>().Play();
+            _particleSystem.Play();
             StartCoroutine(SpeedUpWearOff(_bonusDuration));
         }
     }
