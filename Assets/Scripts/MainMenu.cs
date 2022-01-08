@@ -7,25 +7,20 @@ using UnityEngine.UI;
 public class MainMenu : MonoBehaviour
 {
     [SerializeField] private GameObject _menu;
-    [SerializeField] private GameObject _options;
+    [SerializeField] private GameObject _controls;
 
     [Header ("Buttons")]
     [SerializeField] private Button _btnStart;
-    [SerializeField] private Button _btnOptions;
+    [SerializeField] private Button _btnControls;
     [SerializeField] private Button _btnQuit;
     [SerializeField] private Button _btnBack;
-
-    [SerializeField] private Toggle _tglMute;
-
-    private bool _isMute;
 
     private void Awake()
     {
         _btnStart.onClick.AddListener(StartGame);
-        _btnOptions.onClick.AddListener(ShowOptions);
+        _btnControls.onClick.AddListener(ShowControls);
         _btnQuit.onClick.AddListener(Quit);
         _btnBack.onClick.AddListener(ShowMenu);
-        _tglMute.onValueChanged.AddListener(SetMute);
     }
 
     private void StartGame()
@@ -33,25 +28,20 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene("MazeTest");
     }
 
-    private void ShowOptions()
+    private void ShowControls()
     {
-        _options.SetActive(true);
+        _controls.SetActive(true);
         _menu.SetActive(false);
     }
 
     private void ShowMenu()
     {
-        _options.SetActive(false);
+        _controls.SetActive(false);
         _menu.SetActive(true);
     }
 
     private void Quit()
     {
         Application.Quit();
-    }
-
-    private void SetMute(bool value)
-    {
-        _isMute = value;
     }
 }
