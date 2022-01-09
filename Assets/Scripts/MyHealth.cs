@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 public class MyHealth : MonoBehaviour
 {
@@ -29,6 +31,12 @@ public class MyHealth : MonoBehaviour
         CurHP -= damage;
         if (_curHP <= 0)
         {
+            if (gameObject.CompareTag("Enemy"))
+            {
+                FragsCount frags = GameObject.Find("FragsCount").GetComponent<FragsCount>();
+                frags.CurrentFrags++;
+            }
+
             Die();
         }
     }
@@ -45,7 +53,10 @@ public class MyHealth : MonoBehaviour
 
     private void Die()
     {
-        Destroy(gameObject);
+        if (gameObject.CompareTag("Enemy"))
+        {
+            Destroy(gameObject);
+        }
     }
 
     /*

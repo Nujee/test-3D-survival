@@ -5,6 +5,7 @@ ScriptsOnlyBuild:
     - Bullet
     - DeathScreen
     - EnemySpawnerController
+    - FragsCount
     - GameMenu
     - HealthBarController
     - HealthUp
@@ -33,10 +34,8 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
-    - UnityEngine.UI.InputField
     - UnityEngine.UI.Slider
     - UnityEngine.UI.Text
-    - UnityEngine.UI.Toggle
   sceneClasses:
     Assets/Scenes/MazeTest.unity:
     - Class: 1
@@ -67,6 +66,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 91
       Script: {instanceID: 0}
     - Class: 95
@@ -90,35 +93,37 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 10214}
     - Class: 114
-      Script: {instanceID: 10260}
+      Script: {instanceID: 10228}
     - Class: 114
-      Script: {instanceID: 10264}
+      Script: {instanceID: 10262}
     - Class: 114
-      Script: {instanceID: 10272}
+      Script: {instanceID: 10266}
     - Class: 114
-      Script: {instanceID: 10610}
+      Script: {instanceID: 10274}
     - Class: 114
-      Script: {instanceID: 10620}
+      Script: {instanceID: 10612}
     - Class: 114
-      Script: {instanceID: 10748}
+      Script: {instanceID: 10622}
     - Class: 114
-      Script: {instanceID: 10862}
+      Script: {instanceID: 10750}
     - Class: 114
-      Script: {instanceID: 10912}
+      Script: {instanceID: 10864}
     - Class: 114
-      Script: {instanceID: 10926}
+      Script: {instanceID: 10914}
     - Class: 114
-      Script: {instanceID: 11068}
+      Script: {instanceID: 10928}
     - Class: 114
-      Script: {instanceID: 11088}
+      Script: {instanceID: 11070}
     - Class: 114
-      Script: {instanceID: 11442}
+      Script: {instanceID: 11090}
     - Class: 114
       Script: {instanceID: 11444}
     - Class: 114
-      Script: {instanceID: 11476}
+      Script: {instanceID: 11446}
     - Class: 114
-      Script: {instanceID: 15006}
+      Script: {instanceID: 11478}
+    - Class: 114
+      Script: {instanceID: 41468}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -136,6 +141,10 @@ ScriptsOnlyBuild:
     - Class: 195
       Script: {instanceID: 0}
     - Class: 196
+      Script: {instanceID: 0}
+    - Class: 198
+      Script: {instanceID: 0}
+    - Class: 199
       Script: {instanceID: 0}
     - Class: 213
       Script: {instanceID: 0}
@@ -179,19 +188,13 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9876}
     - Class: 114
-      Script: {instanceID: 10264}
+      Script: {instanceID: 10266}
     - Class: 114
-      Script: {instanceID: 10620}
+      Script: {instanceID: 10622}
     - Class: 114
-      Script: {instanceID: 10806}
+      Script: {instanceID: 11090}
     - Class: 114
-      Script: {instanceID: 11088}
-    - Class: 114
-      Script: {instanceID: 11444}
-    - Class: 114
-      Script: {instanceID: 11458}
-    - Class: 114
-      Script: {instanceID: 11476}
+      Script: {instanceID: 11446}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -263,7 +266,7 @@ ScriptsOnlyBuild:
     className: ActivationTrack
   - hash:
       serializedVersion: 2
-      Hash: e6b33713fc6a6e0d762e49e8aa0bb8e3
+      Hash: 866f79f113bd7e9c3c80e564c6e2fc28
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: MainMenu
@@ -395,13 +398,19 @@ ScriptsOnlyBuild:
     className: Shadow
   - hash:
       serializedVersion: 2
-      Hash: b0ef4ec023a09c541a12fed3a0a82ca1
+      Hash: 060838d05cb198d96d12f2a0a9260234
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: SpeedUp
   - hash:
       serializedVersion: 2
-      Hash: f1813ec6de5e518351a07359f056693b
+      Hash: c20f79eb0bb1660a58a38e6b077c8f99
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PowerupSpawnerController
+  - hash:
+      serializedVersion: 2
+      Hash: 18aec28aa425a0ce894ffbbf3f2a5d75
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: EnemySpawnerController
@@ -485,7 +494,7 @@ ScriptsOnlyBuild:
     className: TextContainer
   - hash:
       serializedVersion: 2
-      Hash: feb7b50ee371d46bf0bc341f924e25ec
+      Hash: bbe84879bc9e6814aefa53f4c4500380
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: HealthUp
@@ -587,7 +596,7 @@ ScriptsOnlyBuild:
     className: TextMeshProUGUI
   - hash:
       serializedVersion: 2
-      Hash: 3b4bdfe64e3093e223668b663a4cb856
+      Hash: d1c7978156460070e758a486f1a4b2c8
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: MyHealth
@@ -689,7 +698,7 @@ ScriptsOnlyBuild:
     className: Dropdown
   - hash:
       serializedVersion: 2
-      Hash: 7720a0d37c4b12b8a6978e9907721a34
+      Hash: 15f44d92533d6d597d64fcc624590efb
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: DeathScreen
@@ -731,12 +740,12 @@ ScriptsOnlyBuild:
     className: PlayableTrack
   - hash:
       serializedVersion: 2
-      Hash: c20f79eb0bb1660a58a38e6b077c8f99
+      Hash: d8cc722575ac45d169dd67e64810c6ee
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: PowerupSpawnerController
+    className: FragsCount
   platform: 5
   scenePathNames:
   - Assets/Scenes/UI_sample_scene.unity
   - Assets/Scenes/MazeTest.unity
-  playerPath: D:/FirstBuild/TestUnityBegin1.exe
+  playerPath: D:/SnowBattleFirstBuild/SecondBuild/TestUnityBegin1.exe

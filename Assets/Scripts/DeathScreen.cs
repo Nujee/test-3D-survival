@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class DeathScreen : MonoBehaviour
 {
+    [SerializeField] private Text _youDeadAndFragsText;
+
     [SerializeField] private GameObject _deathScreen;
 
     [Header("Buttons")]
@@ -30,6 +32,8 @@ public class DeathScreen : MonoBehaviour
         {
             _deathScreen.SetActive(true);
             Time.timeScale = 0;
+            FragsCount frags = GameObject.Find("FragsCount").GetComponent<FragsCount>();
+            _youDeadAndFragsText.text = "You killed " + frags.CurrentFrags + " frags!";
         }
     }
 

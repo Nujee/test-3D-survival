@@ -21,7 +21,7 @@ public class GameMenu : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKey(KeyCode.Escape))
         {
             _gameMenu.SetActive(true);
             Time.timeScale = 0;

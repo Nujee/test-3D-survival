@@ -66,20 +66,17 @@ public class Player : MonoBehaviour
 
     private void FixedUpdate()
     {
-        //if (!_isAlive) return;
         MoveLogic();
     }
 
     private void MoveLogic()
     {
-        //влево-вправо + вперед-назад
         var verticalMovement  = transform.forward * Input.GetAxis("Vertical") * SpeedForce * Time.fixedDeltaTime;
-        //var horizontalMovement = transform.right * Input.GetAxis("Horizontal") * SpeedForce * Time.fixedDeltaTime;
+        var horizontalMovement = transform.right * Input.GetAxis("Horizontal") * SpeedForce * Time.fixedDeltaTime;
 
-        _rigidbody.AddForce(verticalMovement);
+        _rigidbody.AddForce(verticalMovement + horizontalMovement);
 
-        //поворот по мышке (можно еще добавить регулируемый _angularVelocityCoef для быстроты поворта)
-        var h = horizontalSpeed * Input.GetAxis("Horizontal");
+        var h = horizontalSpeed * Input.GetAxis("Mouse X");
         _rigidbody.MoveRotation(_rigidbody.rotation * (Quaternion.Euler(new Vector3(0, h, 0) * Time.fixedDeltaTime)));
     }
 

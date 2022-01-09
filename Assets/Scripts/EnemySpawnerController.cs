@@ -9,6 +9,8 @@ public class EnemySpawnerController : MonoBehaviour
     private int _maxEnemyNum = 100;
     private int _curEnemyNum = 0;
 
+    public int _currentFragsNumber;
+
     private void Awake()
     {
         InvokeRepeating("Spawn", 3, 2);
